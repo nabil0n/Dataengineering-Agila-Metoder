@@ -1,0 +1,2 @@
+hello from note_home
+current path is: /mnt/c/KODA/ITHS/8_DataEngineering_AgilaMetoder/Dataengineering-Agila-Metoder/Linux-training
