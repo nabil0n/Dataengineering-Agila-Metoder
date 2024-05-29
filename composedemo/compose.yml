@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:alpine
+    enviroment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+      ports:
+      - "8080:5432"
+      volumes:
+      - pgdata:/var/lib/postgresql/data
+      secrets:
+      - db_password
+
+  # app:
+  #   build: .
+
+volumes:
+  pgdata:
+
+secrets:
+  db_password:
+    file: ./db_password.txt
