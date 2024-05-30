@@ -1,0 +1,5 @@
+# Run the shell_file.sh once on container startup
+@reboot /01/src/shell_file.sh >> /var/log/cron.log 2>&1
+
+# Run countdown.py every minute
+* * * * * /01/src/countdown.py >> /var/log/cron.log 2>&1
